@@ -4,7 +4,7 @@ defmodule Diin do
   @doc """
   Uses first_write_wins strategy for merging opts
   """
-  def parse(opts, config) do
+  def parse(opts, config) when is_list(opts) and is_map(config) do
     opts
     |> Keyword.get_values(@key)
     |> Enum.reduce(%{}, fn
