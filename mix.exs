@@ -13,9 +13,9 @@ defmodule Diin.MixProject do
       package: package(),
       deps: deps(),
       docs: [
-        main: "README",
+        main: "readme",
         extras: ["README.md"]
-      ]  
+      ]
     ]
   end
 
