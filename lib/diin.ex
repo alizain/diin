@@ -1,9 +1,17 @@
 defmodule Diin do
+  @moduledoc """
+  Diin is a simple convenience wrapper for directly injecting dependencies into Elixir functions.
+  """
+  @moduledoc since: "0.1.0"
+
   @key :deps
 
   @doc """
-  Uses first_write_wins strategy for merging opts
+  Parse opts and gather dependencies based on provided configuration
   """
+  @doc since: "0.1.0"
+
+
   def parse(opts, config) when is_list(opts) and is_map(config) do
     opts
     |> Keyword.get_values(@key)
