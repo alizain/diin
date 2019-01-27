@@ -50,11 +50,7 @@ defmodule Diin do
   end
 
   defp validate_dep(default_dep, new_dep) when is_function(default_dep) and is_function(new_dep) do
-    if :erlang.fun_info(default_dep)[:arity] == :erlang.fun_info(new_dep)[:arity] do
-      :ok
-    else
-      :error
-    end
+    :ok
   end
 
   defp validate_dep(_default_dep, _new_dep) do
