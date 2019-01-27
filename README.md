@@ -1,10 +1,10 @@
 # Diin
 
-[![Master](https://travis-ci.org/bitwalker/distillery.svg?branch=master)](https://travis-ci.org/bitwalker/distillery)
+[![Master](https://img.shields.io/circleci/project/github/alizain/diin/master.svg)](https://circleci.com/gh/alizain/diin)
 [![Hex.pm Version](https://img.shields.io/hexpm/v/diin.svg)](https://hex.pm/packages/diin)
 
-
 Diin is a simple convenience wrapper for directly injecting dependencies into Elixir functions.
+- [Documentation](https://hexdocs.pm/diin)
 
 ## Installation
 
@@ -30,7 +30,7 @@ def get_object(id, opts \\ []) do
 end
 
 # Now you can easily change dependencies when calling the function
-get_object(1, deps: %{repo: TestHTTPClient})
+get_object(1, deps: %{http: TestHTTPClient})
 ```
 
 Things get more interesting when you pass dependencies to nested functions.
