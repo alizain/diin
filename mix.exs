@@ -8,9 +8,14 @@ defmodule Diin.MixProject do
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
       description: description(),
+      source_url: "https://github.com/alizain/diin",
+      homepage_url: "https://github.com/alizain/diin",
       package: package(),
       deps: deps(),
-      source_url: "https://github.com/alizain/diin"
+      docs: [
+        main: "README",
+        extras: ["README.md"]
+      ]  
     ]
   end
 
