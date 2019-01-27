@@ -1,9 +1,10 @@
 version: 2
 jobs:
-  build:
+  test:
     docker:
       - image: circleci/elixir:1.6
     steps:
       - checkout
+      - run: mix local.hex --force
       - run: mix deps.get
       - run: mix test
