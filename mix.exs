@@ -33,6 +33,7 @@ defmodule Diin.MixProject do
   defp package do
     [
       licenses: ["MIT"],
+      maintainers: ["Alizain Feerasta (alizain.feerasta@gmail.com)"],
       links: %{
         "GitHub" => "https://github.com/alizain/diin"
       }

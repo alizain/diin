@@ -5,10 +5,14 @@ defmodule Diin do
 
   @key :deps
 
+  @type deps :: %{atom(): any()}
+  @type opts :: [deps: deps() | any(), ...]
+
   @doc """
   Parse opts and gather dependencies based on provided configuration
   """
 
+  @spec parse(opts(), deps()) :: deps()
   def parse(opts, config) when is_list(opts) and is_map(config) do
     opts
     |> Keyword.get_values(@key)
