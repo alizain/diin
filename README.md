@@ -26,7 +26,7 @@ def get_object(id, opts \\ []) do
   # Define the default dependencies this function uses to do it's work
   deps = Diin.parse(opts, %{http: HTTPoison})
   # Use dependencies to do work
-  deps.http_module.get!("https://foo.bar/#{id}")
+  deps.http.get!("https://foo.bar/#{id}")
 end
 
 # Now you can easily change dependencies when calling the function
